@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    width: 90%;
+    max-width: 1100px;
+    text-align: center;
+    color: #fff;
+}
+
+.heading {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    animation: fadeDown 1s ease;
+}
+
+/* Search */
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    width: 260px;
+    padding: 12px 18px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+
+.search-box button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: #ffd86f;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.search-box button:hover {
+    transform: scale(1.1);
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    animation: slideUp 0.6s ease;
+}
+
+.weather-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.weather-card img {
+    width: 90px;
+    animation: float 2.5s infinite ease-in-out;
+}
+
+.weather-card p {
+    font-size: 0.95rem;
+    margin: 5px 0;
+}
+
+/* Animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
